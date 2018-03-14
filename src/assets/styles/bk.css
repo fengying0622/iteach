@@ -1,0 +1,264 @@
+.Bk {
+  width: 100%;
+  background-color: #eee;
+  position: fixed;
+  top: 0;
+  z-index: 999; }
+
+.bk_all {
+  width: 80%;
+  margin: 24px 10% 0;
+  position: absolute;
+  top: 80px; }
+  .bk_all .ant-breadcrumb {
+    position: absolute;
+    top: -30px; }
+  .bk_all .empty {
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #fff; }
+  .bk_all .history {
+    margin-top: 24px;
+    background-color: #fff;
+    padding: 16px; }
+  .bk_all .add {
+    padding: 16px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-bottom: 24px; }
+    .bk_all .add:hover {
+      color: #0599ff; }
+    .bk_all .add .anticon {
+      margin-right: 12px;
+      font-size: 18px; }
+  .bk_all .weekRecord {
+    background-color: #fff; }
+  .bk_all .list {
+    background-color: #fff; }
+    .bk_all .list .time {
+      padding: 5px 20px;
+      border-bottom: 1px solid #ccc; }
+      .bk_all .list .time h3 {
+        line-height: 30px;
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 0;
+        font-weight: normal; }
+    .bk_all .list .item {
+      height: 60px;
+      padding: 0 20px;
+      border-bottom: 1px solid #eee;
+      color: #333; }
+      .bk_all .list .item h2 {
+        font-size: 15px; }
+      .bk_all .list .item a {
+        width: 140px;
+        line-height: 30px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        background-color: #0599ff; }
+        .bk_all .list .item a:hover {
+          opacity: 0.8; }
+      .bk_all .list .item .anticon {
+        font-size: 20px;
+        margin-right: 10px; }
+
+.bk_data {
+  margin: 80px 10% 0; }
+  .bk_data .catalog {
+    padding-right: 12px;
+    height: 100%; }
+    .bk_data .catalog .content {
+      background-color: #fff;
+      padding: 0 0 50px; }
+      .bk_data .catalog .content .header {
+        height: 50px;
+        color: #fff;
+        background-color: #0599ff;
+        padding: 0 20px; }
+        .bk_data .catalog .content .header h3 {
+          color: #fff; }
+      .bk_data .catalog .content .copyright {
+        color: #ccc;
+        line-height: 30px;
+        border-bottom: 1px solid #eee;
+        margin: 0 20px;
+        background-color: #fff; }
+      .bk_data .catalog .content dl {
+        padding: 5px 20px;
+        background-color: #fff; }
+        .bk_data .catalog .content dl dt {
+          font-size: 14px;
+          line-height: 35px; }
+        .bk_data .catalog .content dl dd {
+          margin-left: 20px;
+          line-height: 25px;
+          cursor: pointer; }
+  .bk_data .listContainer .header {
+    background-color: #fff;
+    padding: 10px 20px; }
+    .bk_data .listContainer .header div {
+      line-height: 25px;
+      color: #666; }
+      .bk_data .listContainer .header div:first-child {
+        margin-bottom: 10px; }
+      .bk_data .listContainer .header div span {
+        padding: 0 10px;
+        line-height: 20px;
+        display: inline-block;
+        cursor: pointer; }
+        .bk_data .listContainer .header div span.active {
+          background-color: #0599ff;
+          color: #fff; }
+  .bk_data .listContainer .listFilter {
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 24px;
+    background-color: #fff;
+    padding: 10px 20px; }
+    .bk_data .listContainer .listFilter .left div {
+      display: inline-block;
+      margin-right: 10px;
+      cursor: pointer; }
+      .bk_data .listContainer .listFilter .left div .anticon {
+        margin-left: 5px; }
+    .bk_data .listContainer .listFilter .search input {
+      padding: 0;
+      height: 25px; }
+  .bk_data .listContainer .listContent {
+    background-color: #fff; }
+    .bk_data .listContainer .listContent .item {
+      padding: 10px;
+      height: 100px; }
+      .bk_data .listContainer .listContent .item img {
+        width: 70px;
+        display: inline-block;
+        vertical-align: middle; }
+      .bk_data .listContainer .listContent .item .info {
+        display: inline-block;
+        vertical-align: middle; }
+        .bk_data .listContainer .listContent .item .info h3 {
+          line-height: 20px;
+          margin-bottom: 5px !important; }
+        .bk_data .listContainer .listContent .item .info span {
+          margin-right: 20px;
+          line-height: 20px; }
+      .bk_data .listContainer .listContent .item button {
+        margin: 0 3px; }
+
+.bk_edit {
+  margin: 80px 10% 0;
+  min-height: 700px; }
+  .bk_edit .titleInout {
+    padding: 10px;
+    background-color: #fff;
+    margin-top: 16px; }
+    .bk_edit .titleInout .ant-cascader-picker {
+      width: 100%; }
+    .bk_edit .titleInout input {
+      display: block;
+      padding-left: 16px;
+      margin: 5px 0; }
+  .bk_edit .ant-btn {
+    padding: 5px 20px;
+    height: 35px;
+    margin-top: 16px;
+    margin-right: 16px; }
+  .bk_edit .editContent {
+    padding: 10px;
+    margin-top: 16px;
+    background-color: #fff; }
+
+.bk_research {
+  margin: 80px 10% 0; }
+  .bk_research .btn {
+    padding: 5px 20px;
+    height: 35px;
+    margin-top: 16px;
+    margin-right: 16px; }
+  .bk_research .editContent {
+    padding: 10px;
+    margin-top: 16px;
+    background-color: #fff; }
+  .bk_research .common {
+    background-color: #fff;
+    margin-top: 16px; }
+    .bk_research .common .title {
+      border-bottom: 1px solid #aaa;
+      padding: 0 12px; }
+      .bk_research .common .title span {
+        line-height: 40px;
+        color: #999; }
+    .bk_research .common .item {
+      padding: 16px 0;
+      margin: 0 16px;
+      border-bottom: 1px solid #aaa; }
+      .bk_research .common .item:last-child {
+        border-bottom: 0; }
+      .bk_research .common .item img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        float: left; }
+      .bk_research .common .item div {
+        display: inline-block;
+        margin: 12px;
+        vertical-align: top;
+        width: 80%; }
+        .bk_research .common .item div span {
+          color: #aaa;
+          margin-right: 12px; }
+          .bk_research .common .item div span:first-child {
+            color: #000; }
+        .bk_research .common .item div p {
+          margin-top: 5px;
+          width: 100%; }
+  .bk_research .doCommon {
+    margin-top: 16px; }
+
+.team_bk_creat {
+  margin: 80px 10% 0;
+  min-height: 700px; }
+  .team_bk_creat .titleInput {
+    padding: 10px;
+    background-color: #fff;
+    margin-top: 16px; }
+    .team_bk_creat .titleInput .ant-cascader-picker {
+      width: 100%; }
+  .team_bk_creat button {
+    padding: 5px 20px;
+    height: 35px;
+    margin-top: 16px;
+    margin-right: 16px; }
+  .team_bk_creat .addTeacher {
+    padding: 15px;
+    margin-top: 16px;
+    background-color: #fff; }
+    .team_bk_creat .addTeacher h4 {
+      margin: 0;
+      padding-right: 10px; }
+    .team_bk_creat .addTeacher h3 {
+      margin-left: 20px;
+      margin-top: 2px; }
+  .team_bk_creat .timePicker {
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #fff; }
+    .team_bk_creat .timePicker h4 {
+      margin: 0;
+      padding-right: 10px; }
+  .team_bk_creat .newPlan {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #1890ff;
+    font-size: 20px; }
+  .team_bk_creat .attach {
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #fff; }

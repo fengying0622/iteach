@@ -1,0 +1,49 @@
+@import "variable.scss";
+
+
+.HeaderComponent{
+  width: 100%;
+  height: 50px;
+  padding: 0 $margin-md;
+  color: #f0f0f0;
+  background-color: $bg-color;
+  -webkit-app-region: drag;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  .logo {
+    height: 25px;
+    margin-right: $margin-sm;
+  }
+  .anticon{
+    margin: 0 0 0 $margin-sm;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .toolbar{
+    text-align: right;
+  }
+
+}
+
+.FooterComponent{
+  margin-top: $margin-lg;
+  padding: 10px 10%;
+  background-color: #555;
+  color: #fff;
+  font-size: 12px;
+  .logo{
+    height: 25px;
+  }
+  .link{
+    border-bottom: 1px solid #fff;
+    margin: $margin-md 0 $margin-xs;
+    a{
+      color: #fff;
+      font-size: 12px;
+      padding-bottom: $padding-xs;
+      margin-right: 40px;
+      display: inline-block;
+    }
+  }
+}

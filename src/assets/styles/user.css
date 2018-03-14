@@ -1,0 +1,48 @@
+.login {
+  background: #fff;
+  width: 600px;
+  height: 350px;
+  margin: 180px auto;
+  -webkit-app-region: drag; }
+  .login .left {
+    width: 200px;
+    height: 350px;
+    background-color: #0599ff; }
+  .login .right {
+    margin-left: 40px;
+    width: 360px;
+    height: 350px;
+    display: block; }
+    .login .right h1 {
+      display: block;
+      line-height: 48px;
+      color: #0599ff;
+      margin-left: 100px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      margin-top: 15px; }
+    .login .right .tab_icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+      z-index: 999; }
+  .login form {
+    width: 300px;
+    height: 265px; }
+    .login form h1 {
+      color: #0599ff;
+      font-size: 35px;
+      text-align: center; }
+    .login form input {
+      height: 40px;
+      text-indent: 10px;
+      -webkit-app-region: no-drag; }
+    .login form button {
+      width: 300px;
+      -webkit-app-region: no-drag;
+      margin-top: 40px; }
+    .login form .tool {
+      margin-top: -10px; }
+    .login form .ant-checkbox-wrapper {
+      height: 20px; }

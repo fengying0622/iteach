@@ -1,0 +1,146 @@
+@import "variable.scss";
+
+.Client{
+  color: #f0f0f0;
+  background-color: $bg-color;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  min-width: 45px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  transition: all 0.5s;
+
+  //头部用户信息
+
+  .top{
+    height: 150px;
+    width: 100%;
+    background: url("../images/user_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+
+    //工具和logo区域
+    .header{
+      height: 30px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      -webkit-app-region: drag;
+      .anticon{
+        margin-right: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    }
+
+    //用户信息区域
+    .userInfo{
+      height: 150px;
+      padding-top: 30px;
+      background-color: rgba(0,0,0,0.5);
+      .headerImg{
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        margin: 20px;
+        float: left;
+      }
+      .info{
+        color: #fff;
+        float: left;
+        margin-top: 20px;
+        h3{
+          color: #fff;
+          display: inline-block;
+        }
+        span{
+          font-size: 12px;
+          padding-left: 10px;
+        }
+        .des{
+          font-size: 12px;
+          margin-bottom: 8px;
+        }
+        .anticon{
+          margin-right: 8px;
+          font-size: 16px;
+        }
+
+      }
+      .money{
+        float: right;
+        margin: 20px 10px 0 0;
+        .anticon{
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  //中心内容区域
+  .container{
+    width: 100%;
+    background-color: #ccc;
+    .slideBar{
+      width: 60px;
+      text-align: center;
+      float: left;
+      background-color: #fff;
+      .group{
+        background-color: #fff;
+        padding: 10px;
+        &.active{
+          padding: 10px;
+          background-color: #ccc;
+          h3{
+            color: #fff;
+            background-color: $bg-color;
+            border-color: $bg-color;
+          }
+        }
+        h3{
+          width: 40px;
+          height: 40px;
+          font-size: 14px;
+          line-height: 40px;
+          margin: 0;
+          border: 1px solid #000;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .content{
+      float: left;
+      text-align: center;
+      .ant-btn{
+        display: block;
+        margin: 20px auto;
+        width: 150px;
+        border-radius: 5px;
+        height: 40px;
+      }
+    }
+  }
+
+  //底部工具栏
+
+  .footer{
+    background-color: #fff;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+    .anticon{
+      color: #333;
+      font-size: 25px;
+    }
+  }
+
+
+}

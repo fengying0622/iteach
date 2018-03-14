@@ -1,0 +1,9 @@
+@import "variable.scss";
+
+body{
+    background-color: $component-bg-color!important;
+}
+
+.anticon{
+    cursor: pointer;
+}

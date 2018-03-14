@@ -1,0 +1,63 @@
+@import "variable.scss";
+
+.login{
+  background: #fff;
+  width: 600px;
+  height: 350px;
+  margin: 180px auto;
+  -webkit-app-region: drag;
+  .left{
+    width: 200px;
+    height: 350px;
+    background-color: #0599ff;
+  }
+  .right{
+    margin-left: 40px;
+    width: 360px;
+    height: 350px;
+    display: block;
+    h1{
+      display: block;
+      line-height: 48px;
+      color: #0599ff;
+      margin-left: 100px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      margin-top: 15px;
+    }
+    .tab_icon{
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+      z-index: 999;
+    }
+  }
+
+  form{
+    width: 300px;
+    height: 265px;
+    h1{
+      color: $bg-color;
+      font-size: 35px;
+      text-align: center;
+    }
+    input{
+      height: 40px;
+      text-indent: 10px;
+      -webkit-app-region: no-drag;
+    }
+    button{
+      width: 300px;
+      -webkit-app-region: no-drag;
+      margin-top: 40px;
+    }
+    .tool{
+      margin-top: -10px;
+    }
+    .ant-checkbox-wrapper{
+      height: 20px;
+    }
+
+  }
+}

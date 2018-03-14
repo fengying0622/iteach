@@ -1,0 +1,362 @@
+@import "variable.scss";
+
+.Bk{
+  width: 100%;
+  background-color: $component-bg-color;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+//集体教研、个人教案
+.bk_all{
+  width: 80%;
+  margin: $margin-lg 10% 0;
+  position: absolute;
+  top: 80px;
+  .ant-breadcrumb{
+    position: absolute;
+    top: -30px;
+  }
+  .empty{
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #fff;
+  }
+  .history{
+    margin-top: $margin-lg;
+    background-color: #fff;
+    padding: $padding-md;
+  }
+  .add{
+    padding: $padding-md;
+    text-align: center;
+    font-size: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-bottom: $padding-lg;
+    &:hover{
+      color: $bg-color;
+    }
+    .anticon{
+      margin-right: $margin-sm;
+      font-size: 18px;
+    }
+  }
+  .weekRecord{
+    background-color: #fff;
+  }
+  .list{
+    background-color: #fff;
+    .time{
+      padding: 5px 20px;
+      border-bottom: 1px solid #ccc;
+      h3{
+        line-height: 30px;
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 0;
+        font-weight: normal;
+      }
+    }
+    .item{
+      height: 60px;
+      padding: 0 20px;
+      border-bottom: 1px solid #eee;
+      color: #333;
+      h2{
+        font-size: 15px;
+      }
+      a{
+        width: 140px;
+        line-height: 30px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        background-color: $bg-color;
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+      .anticon{
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+//备课夹
+.bk_data{
+  margin: 80px 10% 0;
+  .catalog{
+    padding-right: $padding-sm;
+    height: 100%;
+    .content{
+      background-color: #fff;
+      padding: 0 0 50px;
+      .header{
+        height: 50px;
+        color: #fff;
+        background-color: $bg-color;
+        padding: 0 20px;
+        h3{
+          color: #fff;
+        }
+      }
+      .copyright{
+        color: #ccc;
+        line-height: 30px;
+        border-bottom: 1px solid #eee;
+        margin: 0 20px;
+        background-color: #fff;
+      }
+      dl{
+        padding: 5px 20px;
+        background-color: #fff;
+        dt{
+          font-size: 14px;
+          line-height: 35px;
+        }
+        dd{
+          margin-left: 20px;
+          line-height: 25px;
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+  .listContainer{
+    .header{
+      background-color: #fff;
+      padding: 10px 20px;
+      div{
+        line-height: 25px;
+        color: #666;
+        &:first-child{
+          margin-bottom: 10px;
+        }
+        span{
+          padding: 0 10px;
+          line-height: 20px;
+          display: inline-block;
+          cursor: pointer;
+          &.active{
+            background-color: $bg-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .listFilter{
+      height: 50px;
+      border-bottom: 1px solid #ccc;
+      margin-top: $margin-lg;
+      background-color: #fff;
+      padding: 10px 20px;
+      .left{
+        div{
+          display: inline-block;
+          margin-right: 10px;
+          cursor: pointer;
+          .anticon{
+            margin-left: 5px;
+          }
+        }
+      }
+      .search{
+        input{
+          padding: 0;
+          height: 25px;
+        }
+      }
+    }
+
+    .listContent{
+      background-color: #fff;
+      .item{
+        padding: 10px;
+        height: 100px;
+        img{
+          width: 70px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .info{
+          display: inline-block;
+          vertical-align: middle;
+          h3{
+            line-height: 20px;
+            margin-bottom: 5px!important;
+          }
+          span{
+            margin-right: 20px;
+            line-height: 20px;
+          }
+        }
+
+        button{
+          margin: 0 3px;
+        }
+
+      }
+    }
+
+  }
+}
+
+.bk_edit{
+  margin: 80px 10% 0;
+  min-height: 700px;
+  //章节与主题输入框
+  .titleInout{
+    padding: 10px;
+    background-color: #fff;
+    margin-top: $margin-md;
+    .ant-cascader-picker{
+      width: 100%;
+    }
+    input{
+      display: block;
+      padding-left: $padding-md;
+      margin: 5px 0;
+    }
+  }
+  //导按钮
+  .ant-btn{
+    padding: 5px 20px;
+    height: 35px;
+    margin-top: $margin-md;
+    margin-right: $margin-md;
+  }
+  .editContent{
+    padding: 10px;
+    margin-top: $margin-md;
+    background-color: #fff;
+  }
+}
+
+
+.bk_research{
+  margin: 80px 10% 0;
+  //导按钮
+  .btn{
+    padding: 5px 20px;
+    height: 35px;
+    margin-top: $margin-md;
+    margin-right: $margin-md;
+  }
+  .editContent{
+    padding: 10px;
+    margin-top: $margin-md;
+    background-color: #fff;
+  }
+  .common{
+    background-color: #fff;
+    margin-top: $margin-md;
+    .title{
+      border-bottom: 1px solid #aaa;
+      padding: 0 $padding-sm;
+      span{
+        line-height: 40px;
+        color: #999;
+      }
+    }
+
+    .item{
+      padding: $padding-md 0;
+      margin: 0 $margin-md;
+      border-bottom: 1px solid #aaa;
+      &:last-child{
+        border-bottom: 0;
+      }
+      img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        float: left;
+      }
+      div{
+        display: inline-block;
+        margin: $margin-sm;
+        vertical-align: top;
+        width: 80%;
+        span{
+          color: #aaa;
+          margin-right: $margin-sm;
+          &:first-child{
+            color: #000;
+          }
+        }
+        p{
+          margin-top: 5px;
+          width: 100%;
+        }
+      }
+
+    }
+  }
+  .doCommon{
+    margin-top: $margin-md;
+  }
+}
+
+//集体备课发布
+.team_bk_creat{
+  margin: 80px 10% 0;
+  min-height: 700px;
+  .titleInput {
+    padding: 10px;
+    background-color: #fff;
+    margin-top: $margin-md;
+    .ant-cascader-picker {
+      width: 100%;
+    }
+  }
+  //导按钮
+  button{
+    padding: 5px 20px;
+    height: 35px;
+    margin-top: $margin-md;
+    margin-right: $margin-md;
+  }
+  .addTeacher{
+    padding: 15px;
+    margin-top: $margin-md;
+    background-color: #fff;
+    h4{
+      margin:0;
+      padding-right: 10px;
+    }
+    h3{
+      margin-left: 20px;
+      margin-top: 2px;
+    }
+
+  }
+  .timePicker{
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #fff;
+    h4{
+      margin:0;
+      padding-right: 10px;
+    }
+  }
+  .newPlan{
+    margin-top: 20px;
+    text-align:center;
+    background-color: #fff;
+    color: #1890ff;
+    font-size: 20px;
+  }
+  .attach{
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #fff;
+  }
+}
