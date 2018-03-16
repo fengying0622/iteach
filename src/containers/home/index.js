@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-import { Link } from 'react-router-dom';
+import { Router,Link,Route } from 'react-router-dom';
 import Task from '../window/task';
 const { Header, Content, Sider } = Layout;
 
@@ -18,9 +18,9 @@ class Home extends React.Component{
     }
     render() {
         const data = [
-                {key: 'home', value: '首页',path:'/home'},
-                {key: 'task', value: '任务管理',path:'/lesson/team'},
-                {key: 'lessonFirst', value: '集体备课',path:'/task'},
+                {key: 'home', value: '首页',path:'/home', exact:true,main:Home},
+                {key: 'task', value: '任务管理',path:'/task',main:Task},
+                {key: 'lessonFirst', value: '集体备课',path:'/task',main:Task},
                 {key: 'lessonSecond', value: '二次备课',path:'/task'},
                 {key: 'teach', value: '课堂教学',path:'/task'},
                 {key: 'homework', value: '作业管理',path:'/task'},
@@ -31,20 +31,11 @@ class Home extends React.Component{
             ]
 
         const renderContent = ()=>{
-            // switch (this.state.key){
-            //     case 'one':
-            //         return <Task />
-            //     case 'two':
-            //         return <Task />
-            //     case 'three':
-            //         return <Task />
-            //     case 'four':
-            //         return <Task />
-            // }
+
             const key = this.state.key;
             data.map((item)=>{
-                if(item.key===key){
-                    return <Link to='item.path'></Link>
+                if(key===item.key){
+                    return <Task />;
                 }
             })
         }
@@ -74,7 +65,7 @@ class Home extends React.Component{
                             >
                                 {data.map((item)=>(
                                     <Menu.Item key={item.key}>
-                                        <div onClick={()=>this.setState({key: item.key})}>{item.value}</div>
+                                        <Link to={item.path}><div onClick={()=>this.setState({key: item.key})}>{item.value}</div></Link>
                                     </Menu.Item>
                                 ))}
                             </Menu>
@@ -86,7 +77,11 @@ class Home extends React.Component{
                                 <Breadcrumb.Item>{this.props.params}</Breadcrumb.Item>
                             </Breadcrumb>
                             <Content style={{background: '#fff', padding: 24, margin: 0, minHeight: 280}}>
-                                {renderContent()}
+                                {data.map((item)=>{
+                                    if(this.state.key===item.key){
+                                       return <item.main key={item.key}/>;
+                                    }
+                                })}
                             </Content>
                         </Layout>
                     </Layout>
@@ -95,5 +90,5 @@ class Home extends React.Component{
         );
     }
 }
+export default Home;
 
-export default Home
