@@ -65,7 +65,7 @@ class UserLogin extends Component{
                     <span>智能备课</span>
                 </Row>
                 <Row className="right">
-                    <h1>账号登录</h1><span className="tab_icon"><img src={require('../../assets/images/code.png')}></img></span>
+                    <h1>账号登录</h1><span className="tab_icon"><img src={require('../../assets/images/code.png')} alt="login"></img></span>
                     <Form onSubmit={this.doLogin}>
                         <Form.Item>
                             {

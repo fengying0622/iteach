@@ -7,7 +7,7 @@ import { PersistGate } from 'redux-persist/lib/integration/react'
 
 import {configureStore} from './redux/store/configureStore';
 import './assets/styles/index.css';
-import AppRouter from './router';
+import AppRouter from './router/AppRouter';
 import registerServiceWorker from './registerServiceWorker';
 
 const { store, persistor }  = configureStore();

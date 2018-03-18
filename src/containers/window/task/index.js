@@ -1,26 +1,9 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 
 class Task extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
-    componentDidMount() {
-        console.log(this.props);
-        window.addEventListener('resize', () => {
-            this.setState({
-                winWidth: window.innerWidth
-            });
-        })
-    }
-
-
     render() {
 
-        const size = this.props.size;
 
         return (
             <div>
@@ -31,10 +14,5 @@ class Task extends Component {
 
 }
 
-const mapStateToProps = (state) => {
-    return {
-        size: state.size,
-    }
-};
 
-export default connect(mapStateToProps)(Task);
+export default Task;
