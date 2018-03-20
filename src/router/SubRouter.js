@@ -2,62 +2,73 @@ import React from 'react';
 import Login from '../containers/user/login';
 import Task from '../containers/window/task';
 import Home from '../containers/window/home';
+import '../assets/styles/home.css'
 import { Route,Link,Switch} from 'react-router-dom';
-import { Layout, Menu, Breadcrumb} from 'antd';
+import { Layout, Menu,Icon} from 'antd';
 
-const { Header, Content, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 
 
 class SubRouter extends React.Component{
     render() {
         const routes = [
-            {value: '首页',path:'/home',main:Home},
-            {value: '任务管理',path:'/task',main:Task},
-            {value: '集体备课',path:'/firstLesson',main:Task},
-            {value: '二次备课',path:'/secondLesson',main:Task},
-            {value: '课堂教学',path:'/teach',main:Task},
-            {value: '作业管理',path:'/homework',main:Task},
-            {value: '反思评价',path:'/review',main:Task},
-            {value: '我的空间',path:'/workspace',main:Task},
-            {value: '资源中心',path:'/resource',main:Task},
-            {value: '我的学生',path:'/student',main:Task},
+            {type:'solution',value: '我的任务',path:'/task',main:Task},
+            {type:'edit',value: '个人备课',path:'/selfLesson',main:Task},
+            {type:'file-text',value: '集体备课',path:'/groupLesson',main:Task},
+            {type:'file-add',value: '教后反思',path:'/review',main:Task},
+            {type:'appstore-o',value: '我的空间',path:'/selfSpace',main:Task},
+            {type:'cloud-o',value: '公共空间',path:'/publicSpace',main:Task},
+            {type:'idcard',value: '课堂教学',path:'/teach',main:Task},
+            {type:'line-chart',value: '数据服务',path:'/data',main:Task},
+            {type:'share-alt',value: '备课检查',path:'/audit',main:Task},
         ]
         return (
             <Switch>
                 <Route exact path='/' component={Login}/>
-                <div className="App">
-                    <Layout>
-                        <Header className="header">
-                            <div className="logo"/>
-                            <Menu
-                                theme="dark"
-                                mode="horizontal"
-                                defaultSelectedKeys={['2']}
-                                style={{lineHeight: '64px'}}
-                            >
-                                <Menu.Item key="1">nav 1</Menu.Item>
-                                <Menu.Item key="2">nav 2</Menu.Item>
-                                <Menu.Item key="3">nav 3</Menu.Item>
-                            </Menu>
-                        </Header>
+                    <Layout className="home">
                         <Layout>
-                            <Sider width={200} style={{background: '#fff'}}>
+                            <Sider width={68} className="left">
+                                <Menu
+                                    mode="vertical"
+                                    style={{height: '3%', borderRight: 1,background:'#0099FF'}}
+                                >
+                                    <Menu.Item />
+                                </Menu>
                                 <Menu
                                     mode="inline"
-                                    defaultSelectedKeys={['1']}
-                                    defaultOpenKeys={['sub1']}
-                                    style={{height: '100%', borderRight: 0}}
+                                    style={{height: '75%', borderRight: 1,background:'#0099FF'}}
+                                >
+                                    <Menu.Item disabled><Icon type="smile" /></Menu.Item>
+                                    <Menu.Item disabled><Icon type="contacts" /></Menu.Item>
+                                    <Menu.Item disabled><Icon type="home" /></Menu.Item>
+                                </Menu>
+                                <Menu
+                                    mode="inline"
+                                    style={{height: '22%', borderRight: 1,background:'#0099FF'}}
+                                >
+                                    <Menu.Item disabled><Icon type="sound" /></Menu.Item>
+                                    <Menu.Item disabled><Icon type="calendar" /></Menu.Item>
+                                    <Menu.Item disabled><Icon type="bars" /></Menu.Item>
+                                </Menu>
+                            </Sider>
+                            <Sider width={150} style={{background: '#E4E4E4'}}>
+                                <Menu
+                                    mode="inline"
+                                    defaultSelectedKeys={['0']}
+                                    style={{height: '100%', borderRight: 0,background:'#E4E4E4'}}
                                 >
                                     {routes.map((route,index)=>(
                                         <Menu.Item key={index}>
-                                            <Link to={route.path}>{route.value}</Link>
+                                            <Link to={route.path}>
+                                                <Icon type={route.type} />
+                                            {route.value}</Link>
                                         </Menu.Item>
                                     ))}
                                 </Menu>
                             </Sider>
-                            <Layout style={{padding: '0 24px 24px'}}>
-                                <Content style={{background: '#fff', padding: 24, margin: 0, minHeight: 280}}>
+                            <Layout style={{padding: '0'}}>
+                                <Content style={{background: '#fff', padding: 0, margin: 0, minHeight: 600}}>
                                     {routes.map((route,index)=>(
                                         <Route
                                             key={index}
@@ -70,7 +81,6 @@ class SubRouter extends React.Component{
                             </Layout>
                         </Layout>
                     </Layout>
-                </div>
             </Switch>
             )
         }

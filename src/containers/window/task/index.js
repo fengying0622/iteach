@@ -1,13 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react'
+import Public from '../public/index'
+import { Tabs } from 'antd'
+import Distribute from './distribute'
+import '../../../assets/styles/task.css'
+const TabPane = Tabs.TabPane;
 
-class Task extends Component {
+
+class Task extends React.Component {
 
     render() {
-
+        function callback(key) {
+            console.log(key);
+        }
 
         return (
             <div>
-                任务管理
+                <Public title="我的任务"/>
+                <Tabs defaultActiveKey="1" onChange={callback}>
+                    <TabPane tab="任务发布" key="1"><Distribute/></TabPane>
+                    <TabPane tab="任务管理" key="2">任务管理</TabPane>
+                </Tabs>
             </div>
         )
     }

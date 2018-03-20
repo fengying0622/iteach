@@ -1,0 +1,17 @@
+@import "variable.scss";
+
+.title{
+  margin-top: 14px;
+  padding-left: 10px;
+  font-weight: 600;
+}
+.distribute{
+  margin-top: 15px;
+  margin-left: 15px;
+  .yesterday{
+    margin-top: 20px;
+    .name:hover{
+      color: #0599ff;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.title {
+  margin-top: 14px;
+  padding-left: 10px;
+  font-weight: 600; }
+
+.distribute {
+  margin-top: 15px;
+  margin-left: 15px; }
+  .distribute .yesterday {
+    margin-top: 20px; }
+    .distribute .yesterday .name:hover {
+      color: #0599ff; }

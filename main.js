@@ -16,7 +16,7 @@ function createWindow () {
         titleBarStyle: 'hidden'
     });
 
-    win.loadURL("http://localhost:3000/login");
+    win.loadURL("http://localhost:3000");
 
     // win.loadURL(url.format({
     //     pathname: path.join(__dirname, './build/index.html'),

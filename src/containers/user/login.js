@@ -34,7 +34,6 @@ class UserLogin extends Component{
                 //         if (typeof electronRequire === 'undefined') {
                 //             alert('连接electron失败！');
                 //         } else {
-                //             this.props.login(value);
                 //             const BrowserWindow = electronRequire('electron').remote.BrowserWindow;
                 //             const remote = electronRequire('electron').remote;
                 //             console.log(remote);
@@ -48,8 +47,8 @@ class UserLogin extends Component{
                 //
                 //             win.loadURL(url);
                 //             win.show();
-                //         }
-                //     }
+                        // }
+                    // }
                 //
                 // });
             }
@@ -57,10 +56,9 @@ class UserLogin extends Component{
     };
 
     render(){
-        console.log(this.state)
         const { getFieldDecorator } = this.props.form;
         return (
-            <Row className='login' type='flex' justify='start' align='middle' >
+            <Row className='login' type='flex' justify='start' align='middle'>
                 <Row className="left">
                     <span>智能备课</span>
                 </Row>
