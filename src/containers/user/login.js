@@ -24,10 +24,11 @@ class UserLogin extends Component{
                 value.client_id = 2;
                 value.client_secret = '7t3ltedj81iYTOlr2auIbqzjf9YechVdvHEf0xMm';
                 value.scope = '';
+                value.userID=1;
                 delete value['remember'];
                 console.log(value);
                 this.props.login(value);
-                this.props.history.push('/home')
+                this.props.history.push('/task')
                 //  userLogin(value).then(res=>{
                 //     console.log(res);
                 //     if(res.access_token) {

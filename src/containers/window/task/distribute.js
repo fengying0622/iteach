@@ -3,6 +3,8 @@
  */
 import React from "react"
 import { Button,Icon,Row,Col,Modal} from 'antd';
+import {withRouter,Link} from "react-router-dom"
+
 
 class Distribute extends React.Component{
     state = {
@@ -26,17 +28,18 @@ class Distribute extends React.Component{
 
     render(){
         const { visible, loading } = this.state;
+        var id = this.props.id;
         return (
             <div>
             <Row className='distribute'>
                 <Row type="flex" justify='space-around' align="middle">
-                <Button type="primary"  size="large">发布任务</Button>
+                    <Link to={/distribute/+id}><Button type="primary"  size="large">发布任务</Button></Link>
                 </Row>
                 <Row className='yesterday'>
                     <Row><span>昨天</span></Row>
                     <hr />
-                    <Row type="flex" justify='start' align="middle" onClick={this.showModal} >
-                        <Col className='name'>沁园春·长沙 2017-2018版教案</Col>
+                    <Row type="flex" justify='start' align="middle" onClick={this.showModal} className='name'>
+                        <Col>沁园春·长沙 2017-2018版教案</Col>
                     </Row>
                     <Row type="flex" justify='start' align="middle">
                         <Col><Icon type="clock-circle-o" />2017.01.10</Col>
@@ -75,4 +78,4 @@ class Distribute extends React.Component{
         )
     }
 }
-export default Distribute;
+export default withRouter(Distribute);

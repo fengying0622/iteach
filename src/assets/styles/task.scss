@@ -1,10 +1,5 @@
 @import "variable.scss";
 
-.title{
-  margin-top: 14px;
-  padding-left: 10px;
-  font-weight: 600;
-}
 .distribute{
   margin-top: 15px;
   margin-left: 15px;
@@ -14,4 +9,9 @@
       color: #0599ff;
     }
   }
+}
+.button{
+  border:0;
+  font-weight: 600;
+  padding:0 0;
 }

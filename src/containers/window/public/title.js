@@ -2,14 +2,15 @@
  * Created by Administrator on 2018/3/19.
  */
 import React from "react"
+import {Row} from 'antd'
 
 class Title extends React.Component{
     render(){
         return (
-                <div>
-                    <div className="title">{this.props.title}</div>
-                    <div><hr /></div>
-                </div>
+                <Row>
+                    <Row className="title">{this.props.title}</Row>
+                    <Row><hr /></Row>
+                </Row>
 
             )
     }

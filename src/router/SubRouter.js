@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from '../containers/user/login';
 import Task from '../containers/window/task';
-import Home from '../containers/window/home';
+import ToTask from '../containers/window/task/toTask'
 import '../assets/styles/home.css'
 import { Route,Link,Switch} from 'react-router-dom';
 import { Layout, Menu,Icon} from 'antd';
@@ -77,6 +77,7 @@ class SubRouter extends React.Component{
                                         />
                                         )
                                     )}
+                                    <Route path="/distribute/:id" component={ToTask}/>
                                 </Content>
                             </Layout>
                         </Layout>
